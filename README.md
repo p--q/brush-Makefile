@@ -1,16 +1,16 @@
-# syntaxhighlighter-brush
+# syntaxhighlighter-brush-javascript
 
-Brush module for [SyntaxHighlighter](https://github.com/syntaxhighlighter/syntaxhighlighter).
+JavaScript brush module for [SyntaxHighlighter](https://github.com/syntaxhighlighter/syntaxhighlighter).
 
-[![Dependency status](https://david-dm.org/syntaxhighlighter/syntaxhighlighter-brush.svg)](https://david-dm.org/syntaxhighlighter/syntaxhighlighter-brush)
-[![devDependency Status](https://david-dm.org/syntaxhighlighter/syntaxhighlighter-brush/dev-status.svg)](https://david-dm.org/syntaxhighlighter/syntaxhighlighter-brush#info=devDependencies)
-[![Build Status](https://travis-ci.org/syntaxhighlighter/syntaxhighlighter-brush.svg)](https://travis-ci.org/syntaxhighlighter/syntaxhighlighter-brush)
+[![Dependency status](https://david-dm.org/syntaxhighlighter/syntaxhighlighter-brush-javascript.svg)](https://david-dm.org/syntaxhighlighter/syntaxhighlighter-brush-javascript)
+[![devDependency Status](https://david-dm.org/syntaxhighlighter/syntaxhighlighter-brush-javascript/dev-status.svg)](https://david-dm.org/syntaxhighlighter/syntaxhighlighter-brush-javascript#info=devDependencies)
+[![Build Status](https://travis-ci.org/syntaxhighlighter/syntaxhighlighter-brush-javascript.svg)](https://travis-ci.org/syntaxhighlighter/syntaxhighlighter-brush-javascript)
 
-[![NPM](https://nodei.co/npm/syntaxhighlighter-brush.svg)](https://npmjs.org/package/syntaxhighlighter-brush)
+[![NPM](https://nodei.co/npm/syntaxhighlighter-brush-javascript.svg)](https://npmjs.org/package/syntaxhighlighter-brush-javascript)
 
 ## Installation
 
-    npm install syntaxhighlighter-brush
+    npm install syntaxhighlighter-brush-javascript
 
 ## Testing
 
