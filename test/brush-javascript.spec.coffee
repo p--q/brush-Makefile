@@ -19,7 +19,7 @@ SAMPLE = """
   }
 """
 
-describe 'syntaxhighlighter-brush-javascript', ->
+describe 'brush-javascript', ->
   instance = null
 
   before ->
