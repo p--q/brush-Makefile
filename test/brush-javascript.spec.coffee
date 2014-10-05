@@ -2,12 +2,12 @@ require 'coffee-errors'
 
 chai = require 'chai'
 expect = chai.expect
-parser = require 'syntaxhighlighter-parser'
+parser = require 'parser'
 
 (typeof window isnt 'undefined' and window or global)
   .SyntaxHighlighter =
-    Highlighter: require('syntaxhighlighter-brush').Brush
-    regexLib: require('syntaxhighlighter-common').regexLib
+    Highlighter: require('brush-base')
+    regexLib: require('regex-lib')
     brushes: {}
 
 {Brush} = require '..'
