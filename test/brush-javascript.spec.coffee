@@ -1,29 +1,29 @@
 require 'coffee-errors'
 
+fs = require 'fs'
 chai = require 'chai'
 expect = chai.expect
 parser = require 'parser'
 
 (typeof window isnt 'undefined' and window or global)
   .SyntaxHighlighter =
-    Highlighter: require('brush-base')
-    regexLib: require('regex-lib')
+    Highlighter: require 'brush-base'
+    regexLib: require 'regex-lib'
     brushes: {}
 
 {Brush} = require '..'
 
-SAMPLE = """
-  /* hello */
-  function foo() {
-
-  }
-"""
+SAMPLE = fs.readFileSync "#{__dirname}/../SAMPLE", 'utf8'
+console.log SAMPLE
 
 describe 'brush-javascript', ->
   instance = null
 
   before ->
     instance = new Brush()
+
+  it 'has populated code sample', ->
+    expect(SAMPLE).to.not.match /^Populate/
 
   describe 'instance', ->
     it 'has `regexList`', ->
