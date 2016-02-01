@@ -1,5 +1,5 @@
 {
-  "name": "brush-javascript",
+  "name": "@alexgorbatchev/brush-javascript",
   "version": "4.0.0",
   "description": "Brush module for SyntaxHighlighter.",
   "keywords": [
