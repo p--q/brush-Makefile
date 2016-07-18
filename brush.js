@@ -1,44 +1,18 @@
 var BrushBase = require('brush-base');
 var regexLib = require('syntaxhighlighter-regex').commonRegExp;
-
 function Brush() {
-  var keywords = 'break case catch class continue ' +
-    'default delete do else enum export extends false  ' +
-    'for from as function if implements import in instanceof ' +
-    'interface let new null package private protected ' +
-    'static return super switch ' +
-    'this throw true try typeof var while with yield';
-
-  this.regexList = [
-    {
-      regex: regexLib.multiLineDoubleQuotedString,
-      css: 'string'
-    },
-    {
-      regex: regexLib.multiLineSingleQuotedString,
-      css: 'string'
-    },
-    {
-      regex: regexLib.singleLineCComments,
-      css: 'comments'
-    },
-    {
-      regex: regexLib.multiLineCComments,
-      css: 'comments'
-    },
-    {
-      regex: /\s*#.*/gm,
-      css: 'preprocessor'
-    },
-    {
-      regex: new RegExp(this.getKeywords(keywords), 'gm'),
-      css: 'keyword'
-    }
+    var functions =  'subst patsubst strip findstring filter filter-out sort dir notdir suffix basename addsuffix addprefix join word wordlist words firstword wildcard foreach origin shell'; 
+    var constants = 'PHONY SUFFIXES DEFAULT PRECIOUS INTERMEDIATE SECONDARY IGNORE SILENT EXPORT_ALL_VARIABLES';
+    this.regexList = [
+        { regex: regexLib.singleLineCComments, css: 'comments' },  // one line comments
+        { regex: regexLib.doubleQuotedString, css: 'string' }, // double quoted strings
+        { regex: regexLib.singleQuotedString, css: 'string' }, // single quoted strings
+        { regex: /\$\([^\@%<\?\^\+\*]\w+\)/gm,             css: 'variable' },  // 変数
+        { regex: /((\$\(?[\@%<\?\^\+\*](D\)|F\))*)|%|\$&lt;)/gm,    css: 'keyword' },   // 自動変数
+        { regex: new RegExp(this.getKeywords(functions), 'gm'),   css: 'functions' }, // テキスト変形関数
+        { regex: new RegExp(this.getKeywords(constants), 'gm'),   css: 'constants' }  // ビルトインターゲット名  
     ];
-
-  this.forHtmlScript(regexLib.scriptScriptTags);
 }
-
 Brush.prototype = new BrushBase();
-Brush.aliases = ['js', 'jscript', 'javascript', 'json'];
+Brush.aliases = ['Makefile'];
 module.exports = Brush;
