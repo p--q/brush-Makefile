@@ -7,6 +7,8 @@
 
 Makefile brush module for [SyntaxHighlighter](https://github.com/syntaxhighlighter/syntaxhighlighter).
 
+<a href="http://p--q.blogspot.jp/2016/07/linuxbean1404123syntaxhighlighter-v4.html">linuxBean14.04(123)SyntaxHighlighter v4のブラシを作成する</a>
+
 ## Usage
 
 Please see [Building Instructions](https://github.com/syntaxhighlighter/syntaxhighlighter/wiki/Building) on the [SyntaxHighlighter Wiki](https://github.com/syntaxhighlighter/syntaxhighlighter/wiki) for details.
