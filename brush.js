@@ -4,7 +4,7 @@ function Brush() {
     var functions =  'subst patsubst strip findstring filter filter-out sort dir notdir suffix basename addsuffix addprefix join word wordlist words firstword wildcard foreach origin shell'; 
     var constants = 'PHONY SUFFIXES DEFAULT PRECIOUS INTERMEDIATE SECONDARY IGNORE SILENT EXPORT_ALL_VARIABLES';
     this.regexList = [
-        { regex: regexLib.singleLineCComments, css: 'comments' },  // one line comments
+        { regex: /#.*$/gm, css: 'comments' },  // one line comments
         { regex: regexLib.doubleQuotedString, css: 'string' }, // double quoted strings
         { regex: regexLib.singleQuotedString, css: 'string' }, // single quoted strings
         { regex: /\$\([^\@%<\?\^\+\*]\w+\)/gm,             css: 'variable' },  // 変数
