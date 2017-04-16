@@ -1,6 +1,5 @@
-/**
- * This is a Makefile sample.
- */
+
+# This is a Makefile sample.
 
 %.run: $(OUT_APP_CLASS)/%.jar
  $(SDK_JAVA) -Dcom.sun.star.lib.loader.unopath="$(OFFICE_PROGRAM_PATH)" -jar $<
